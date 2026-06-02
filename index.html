@@ -1,107 +1,251 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZZL · Notes & Lab</title>
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Inter', 'Noto Serif SC', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zilu Zhang / ZZL-2005 personal homepage: agent systems, interpretability, embodied safety, and deep learning theory." />
+  <title>Zilu Zhang · ZZL-2005</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
 
-<body class="antialiased">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Zilu Zhang home">
+      <span class="brand-mark">Z</span>
+      <span>Zilu Zhang</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#focus">Focus</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="icon-button" href="https://github.com/ZZL-2005" target="_blank" rel="noreferrer" aria-label="Open GitHub profile">
+      <i data-lucide="code" aria-hidden="true"></i>
+    </a>
+  </header>
 
-<!-- NAV BAR -->
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div class="flex items-center space-x-2 text-slate-800 font-bold text-xl">
-            <i class="ph ph-cube-transparent text-blue-600 text-2xl"></i>
-            <span>ZZL · Lab</span>
-        </div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-            <a href="/index.html" class="hover:text-blue-600 transition">首页</a>
-            <a href="#posts" class="hover:text-blue-600 transition">文章</a>
-            <a href="/about.html" class="hover:text-blue-600 transition">关于</a>
-            <a href="https://github.com/ZZL-2005/ZZL.github.io" class="hover:text-blue-600 transition">Github</a>
-        </div>
-    </div>
-</nav>
-
-<main class="max-w-7xl mx-auto px-4 py-12">
-
-    <!-- TOP INTRO -->
-    <section class="mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            个人学习 · 作业 · 随想
-        </h1>
-        <p class="text-slate-600 max-w-2xl">
-            这里记录课程作业、AI 学习笔记，还有一些乱七八糟但挺有意思的想法。
-            每一个文章都是一个独立小项目。
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-portrait" src="https://avatars.githubusercontent.com/u/153277643?v=4" alt="GitHub avatar of ZZL-2005" />
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">BUPT AI · Agent Systems · Interpretability</p>
+        <h1 id="hero-title">Zilu Zhang<br /><span>ZZL-2005</span></h1>
+        <p class="hero-copy">
+          北京邮电大学人工智能专业本科生，关注执行 Agent、机制可解释性、具身安全评测和深度学习理论。
         </p>
+        <div class="hero-actions" aria-label="Contact links">
+          <a class="action-link primary" href="mailto:zhangzilu05@gmail.com">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            Email
+          </a>
+          <a class="action-link" href="https://github.com/ZZL-2005" target="_blank" rel="noreferrer">
+            <i data-lucide="code" aria-hidden="true"></i>
+            GitHub
+          </a>
+          <a class="action-link" href="#projects">
+            <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+            Work
+          </a>
+        </div>
+      </div>
+      <aside class="hero-notes" aria-label="Profile highlights">
+        <div>
+          <span>GPA</span>
+          <strong>3.84</strong>
+        </div>
+        <div>
+          <span>Major Rank</span>
+          <strong>3 / 177</strong>
+        </div>
+        <div>
+          <span>Now</span>
+          <strong>Execution agents</strong>
+        </div>
+      </aside>
     </section>
 
-    <!-- POSTS SECTION -->
-    <section id="posts" class="space-y-6">
-        <h2 class="text-xl font-semibold text-slate-900 mb-4">最近更新</h2>
+    <section class="section intro-band" aria-label="Short bio">
+      <div class="section-label">Profile</div>
+      <div class="intro-text">
+        <p>
+          I build evaluation and attribution tools for execution agents, and design benchmarks that make unsafe behavior in embodied systems easier to observe, compare, and discuss.
+        </p>
+      </div>
+      <div class="intro-meta">
+        <span>北京邮电大学</span>
+        <span>Artificial Intelligence</span>
+        <span>Research · Engineering</span>
+      </div>
+    </section>
 
-        <!-- POSTS CARDS WILL BE AUTOMATICALLY INSERTED HERE BY GITHUB ACTIONS -->
-        <!-- Example Auto-Generated Card Format:
-
-        <article class="bg-white border border-slate-200 rounded-xl shadow-sm p-6 hover:border-blue-300 hover:shadow-md transition">
-            <div class="space-y-2">
-                <div class="flex items-center gap-2 text-xs">
-                    <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-semibold">课程作业</span>
-                    <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">人工智能伦理</span>
-                </div>
-                <h3 class="text-lg font-semibold text-slate-900">
-                    <a href="/posts/xxx/index.html" class="hover:text-blue-600 transition">
-                        示例文章标题
-                    </a>
-                </h3>
-                <p class="text-sm text-slate-600 max-w-2xl">
-                    这是文章摘要（从 meta.json 来）。
-                </p>
-                <p class="text-xs text-slate-400">2025-02-02 · 10 min</p>
-            </div>
-
-            <div class="mt-4 md:mt-0 flex items-center text-sm">
-                <a href="/posts/xxx/index.html" class="inline-flex items-center text-blue-600 hover:text-blue-700">
-                    阅读全文 <i class="ph ph-arrow-right ml-1"></i>
-                </a>
-            </div>
+    <section class="section" id="focus" aria-labelledby="focus-title">
+      <div class="section-heading">
+        <p class="eyebrow">Current Focus</p>
+        <h2 id="focus-title">Small set of hard problems.</h2>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card">
+          <i data-lucide="network" aria-hidden="true"></i>
+          <h3>Agent Systems</h3>
+          <p>Evaluation, trace replay, action critique, and tooling around execution agents.</p>
         </article>
-
-        -->
-
+        <article class="focus-card">
+          <i data-lucide="scan-search" aria-hidden="true"></i>
+          <h3>Interpretability</h3>
+          <p>Mechanistic skills, attribution workflows, and model behavior diagnosis.</p>
+        </article>
+        <article class="focus-card">
+          <i data-lucide="shield-check" aria-hidden="true"></i>
+          <h3>Embodied Safety</h3>
+          <p>Unsafe action detection and benchmark design for household scenarios.</p>
+        </article>
+      </div>
     </section>
-</main>
 
-<footer class="bg-white border-t border-slate-200 py-8 mt-12">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <p class="text-slate-500 text-sm">© 2025 ZZL · Built with HTML & Tailwind on GitHub Pages.</p>
-    </div>
-</footer>
+    <section class="section research-section" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p class="eyebrow">Research</p>
+        <h2 id="research-title">Work shaped around evaluation, safety, and reasoning.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2026 · present</div>
+          <div class="timeline-body">
+            <h3>MechCritic</h3>
+            <p class="subtitle">Critiquing Execution Agents with Self-Evolving Mechanistic Skills</p>
+            <p>Critical & Act dual-agent framework, self-evolving interpretability skills, trajectory extraction, and replay tooling.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2025 · 2026</div>
+          <div class="timeline-body">
+            <h3>HomeSafe-Bench</h3>
+            <p class="subtitle">Unsafe action detection for embodied agents in household scenarios</p>
+            <p>Benchmark design, video data generation, annotation workflow, and paper figure production.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">ARR review</div>
+          <div class="timeline-body">
+            <h3>Resource Consumption Threats in LLMs</h3>
+            <p class="subtitle">Survey on large reasoning model attacks</p>
+            <p>Writing and synthesis around resource-consumption threats in reasoning-heavy language models.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Selected Projects</p>
+          <h2 id="projects-title">Code that shows the direction.</h2>
+        </div>
+        <a class="text-link" href="https://github.com/ZZL-2005?tab=repositories" target="_blank" rel="noreferrer">
+          <span>All repositories</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="project-grid">
+        <article class="project-card accent-a">
+          <div class="project-top">
+            <h3>Mytorch</h3>
+            <a href="https://github.com/ZZL-2005/Mytorch" target="_blank" rel="noreferrer" aria-label="Open Mytorch repository">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p>A small neural-network implementation based on NumPy, covering forward and backward propagation.</p>
+          <div class="tags">
+            <span>NumPy</span>
+            <span>Backprop</span>
+          </div>
+        </article>
+        <article class="project-card accent-b">
+          <div class="project-top">
+            <h3>NLP_NER_Transformer</h3>
+            <a href="https://github.com/ZZL-2005/NLP_NER_Transformer" target="_blank" rel="noreferrer" aria-label="Open NLP NER Transformer repository">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p>Attention and residual implementation on a small-scale named entity recognition task.</p>
+          <div class="tags">
+            <span>NLP</span>
+            <span>Transformer</span>
+          </div>
+        </article>
+        <article class="project-card accent-c">
+          <div class="project-top">
+            <h3>NNDL-course-captioning</h3>
+            <a href="https://github.com/ZZL-2005/NNDL-course-captioning" target="_blank" rel="noreferrer" aria-label="Open NNDL course captioning repository">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p>Small-scale interpretability exploration on fashion captioning and course experiments.</p>
+          <div class="tags">
+            <span>Captioning</span>
+            <span>MI</span>
+          </div>
+        </article>
+        <article class="project-card accent-d">
+          <div class="project-top">
+            <h3>latent</h3>
+            <a href="https://github.com/ZZL-2005/latent" target="_blank" rel="noreferrer" aria-label="Open latent repository">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p>Notes and experiments on maximum likelihood estimation and probability intuition.</p>
+          <div class="tags">
+            <span>MLE</span>
+            <span>Probability</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievement-band" aria-labelledby="achievement-title">
+      <div>
+        <p class="eyebrow">Competition</p>
+        <h2 id="achievement-title">National First Prize</h2>
+      </div>
+      <p>
+        China Undergraduate Mathematical Contest in Modeling, 2025. The solution focused on UAV smoke-screen occlusion duration and used isolated non-zero occlusion peaks as search initialization.
+      </p>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Research notes, code, and conversations.</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:zhangzilu05@gmail.com">
+          <i data-lucide="mail" aria-hidden="true"></i>
+          <span>zhangzilu05@gmail.com</span>
+        </a>
+        <a class="contact-item" href="mailto:2227404880@qq.com">
+          <i data-lucide="send" aria-hidden="true"></i>
+          <span>2227404880@qq.com</span>
+        </a>
+        <a class="contact-item" href="https://github.com/ZZL-2005" target="_blank" rel="noreferrer">
+          <i data-lucide="code" aria-hidden="true"></i>
+          <span>github.com/ZZL-2005</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>ZZL-2005</span>
+    <span>Built for GitHub Pages</span>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
