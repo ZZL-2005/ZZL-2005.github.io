@@ -2,14 +2,14 @@
 
 Website: https://zzl-2005.github.io/
 
-A personal academic homepage with warm paper colors, a restrained top navigation, a large serif name, a portrait position, and quiet placeholders for future content. It uses plain HTML, CSS, and a small optional navigation script.
+A personal academic homepage with warm paper colors, a restrained top navigation, an upright serif name, a portrait position, and quiet placeholders for future content. It uses plain HTML, CSS, and a small optional navigation script. Typography uses Lora for the name and monogram, with Instrument Sans for the text, section headings, and interface labels.
 
 ## Content and structure
 
 - `index.html`: a short biography, two publication slots, two internship slots, one education slot, and contact links.
 - `styles.css`: layout, typography, colors, mobile breakpoints, and print styles.
 - `script.js`: highlights the current section and supports the adjacent internship/education columns. All content and links work without JavaScript.
-- `assets/fonts/`: locally served Instrument Serif and Instrument Sans fonts, with their SIL Open Font License notices. There is no external font request or font installation.
+- `assets/fonts/`: locally served Lora and Instrument Sans fonts, with their SIL Open Font License notices. There is no external font request or font installation.
 - `favicon.svg`: personal site icon.
 - `about.html`: redirects the previous About URL to the main page.
 - `404.html`: recovery link for retired URLs.
