@@ -1,9 +1,0 @@
-{
-  "title": "针对稀疏数据的自适应注意力机制优化",
-  "subtitle": "Optimizing Adaptive Attention for Sparse Data",
-  "tags": ["课程作业", "深度学习"],
-  "date": "2023-11-20",
-  "reading": "15 min",
-  "path": "/posts/VAE/index.html",
-  "summary": "一份基于 Transformer 稀疏注意力机制的课程小报告，同时用来测试整套学习报告网页模板和博客架构。"
-}
